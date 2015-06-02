@@ -1,0 +1,31 @@
+$(document).on("ready",function(){
+	console.log("hola");
+	$("#about").on("click",function(e){
+		e.preventDefault();
+		$(".contenedor").css("display","block");
+		TweenMax.from(".contenedor",1,{alpha:0});	
+	});
+	$("#menu").on("click",function(e){
+		e.preventDefault();
+		$("#home, #about, #gallery, #contacts").css("display","block");
+		TweenMax.from("#home",1,{alpha:0});
+		TweenMax.from("#about",1,{alpha:0});
+		TweenMax.from("#gallery",1,{alpha:0});
+		TweenMax.from("#contacts",1,{alpha:0});	
+	});
+	$(".menu").on("click",function(e){
+		e.preventDefault();
+		$(".cuadroprecios").css("display","block");
+		TweenMax.from(".cuadroprecios",1,{alpha:0, y:-40, ease: Bounce.easeOut});
+	});
+	$(".menudos").on("click",function(e){
+		e.preventDefault();
+		$(".cuadropreciosdos").css("display","block");
+		TweenMax.from(".cuadropreciosdos",1,{alpha:0});
+	});
+	$(".menutres").on("click",function(e){
+		e.preventDefault();
+		$(".cuadropreciostres").css("display","block");
+		TweenMax.from(".cuadropreciostres",1,{alpha:0});
+	});
+});
